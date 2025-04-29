@@ -1,5 +1,5 @@
 # Readme 📖
-This repo contains my `karabiner.json` file containing my main `Karabiner-Elements` configuration to use my Mac 
+This repo contains my `karabiner.json` file containing my `Karabiner-Elements` configuration to use my Mac 
 ### Modifications 
 - `Caps Lock` → `Right Command`
 - `FN` → `Right Command`
