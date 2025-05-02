@@ -5,6 +5,20 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Disable Right Command + Tab",
+                        "manipulators": [
+                            {
+                                "conditions": [],
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": { "mandatory": ["right_command"] }
+                                },
+                                "to": [],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "RightCommand + Del to act as Fn + Del and RightCommand + Option + Del to act as Option + Fn + Del",
                         "manipulators": [
                             {
@@ -39,7 +53,7 @@
                         ]
                     },
                     {
-                        "description": "Use Tab as Option when held",
+                        "description": "Use Tab as LeftOption when held",
                         "manipulators": [
                             {
                                 "from": {
@@ -112,6 +126,10 @@
             "selected": true,
             "simple_modifications": [
                 {
+                    "from": { "apple_vendor_top_case_key_code": "keyboard_fn" },
+                    "to": [{ "key_code": "right_command" }]
+                },
+                {
                     "from": { "key_code": "caps_lock" },
                     "to": [{ "key_code": "right_command" }]
                 },
@@ -126,10 +144,6 @@
                 {
                     "from": { "key_code": "right_command" },
                     "to": [{ "key_code": "right_option" }]
-                },
-                {
-                    "from": { "apple_vendor_top_case_key_code": "keyboard_fn" },
-                    "to": [{ "key_code": "right_command" }]
                 }
             ],
             "virtual_hid_keyboard": { "keyboard_type_v2": "iso" }
