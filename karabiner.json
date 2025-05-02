@@ -5,15 +5,22 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Disable Right Command + Tab",
+                        "description": "Map Right Command + Tab → Right Command + Option",
                         "manipulators": [
                             {
-                                "conditions": [],
                                 "from": {
                                     "key_code": "tab",
-                                    "modifiers": { "mandatory": ["right_command"] }
+                                    "modifiers": {
+                                        "mandatory": ["right_command"],
+                                        "optional": ["any"]
+                                    }
                                 },
-                                "to": [],
+                                "to": [
+                                    {
+                                        "key_code": "left_option",
+                                        "modifiers": ["right_command"]
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
